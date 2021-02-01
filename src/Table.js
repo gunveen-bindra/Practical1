@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 
 class Table_had extends Component {
     render() {
@@ -36,3 +36,4 @@ const Table = () => {
 
 export default Table_had;
 export { Table}
+*/
