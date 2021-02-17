@@ -1,10 +1,85 @@
 import logo from './logo.svg';
 import './App.css';
+import {ThemeContext} from './theme-context'
+import React from 'react'
+function App() {
+const {theme, toggle, dark } = React.useContext(ThemeContext)
+  return (
+    <div className="App">
+      <header className="App-header" style = {{backgroundColor: theme.backgroundColor, color: theme.color}} >
+        <button
+        type = "button"
+        onClick = {toggle}
+        style = {{backgroundColor: theme.backgroundColor, color: theme.color}}>
+          Click here to toggle to {!dark ? 'dark': 'light'} theme
+          </button>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+export default App;
+/*
+class Form extends Component {
+  state = { username:'Enter github username',
+  //res_name:''
+  }
 
+  handleSubmit = async(event) => {
+    event.preventDefault();
+    const axios = require('axios');
+     const response = await axios.get(`https://api.github.com/users/${this.state.username}` )
+     //const response = await axios.get(`https://api.github.com/users/${this.state.username}` );
+    //const all_data = return_response.data
+    //console.log(all_data)
+
+    //alert(response.data)
+    //console.log(response.data.login)
+    console.log(response)
+  }
+  render() {
+    return(
+      <form onSubmit = {this.handleSubmit}>
+        <input type ="text" placeholder = "Enter your name" value = {this.state.username} 
+        onChange = {event => this.setState({username: event.target.value})}/>
+        <button>Submit</button>
+        
+      </form>
+    );
+  }
+}
+
+function App() {
+  return(
+    <Form>
+
+    </Form>
+  )
+}
+export default App;
+*/
+/*
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" style = {{backgroundColor: theme.backgroundColor,color:theme}}>
+        <button
+        type = "button"
+        onClick = {toggle}
+        style = {{backgroundColor: theme.backgroundColor, color:theme}}>
+          Click here to toggle to  {!dark ? 'dark ': 'light'} theme
+          </button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -22,8 +97,8 @@ function App() {
   );
 }
 
+*/
 
-export default App;
 
 /*function App() {
 

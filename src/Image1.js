@@ -1,26 +1,38 @@
-import { Component } from "react";
+import {Component} from "react";
 
 class Image extends Component
 {
-    render()
-    {
-        return(
-            <div>
-                <img src = {this.props.value[0]} alt = "text" width = "330"/>
-                <p>{this.props.value[1]}</p>
-            </div>
-        );
+    constructor(props){
+        super(props);
+        this.state = {value: 'food'}
     }
+    
+  render()
+  {
+    return(
+        
+        <div>
+            
+      <img src={this.props.value[0]} alt="food" height="185px" width="400px" onClick = {
+          () =>{
+              this.setState({value: 'clicked'})
+          }
+    }
+      />
+    
+    <p>{this.state.value}</p>
+      
+        </div>
+    );
+  }
 }
-class Card extends Component{
-    renderButton(value)
-    {
-        return(
-            <Image value = {value} />
 
-        )
-    }
-    render()
+class Card extends Component{
+  renderButton(value)
+  {
+    return <Image value={value} />;
+  }
+  render()
     {
         return(
             <div align ="center">

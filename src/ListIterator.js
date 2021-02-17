@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ListValue extends React.Component {
+class List_value extends React.Component {
     state = {
         list_array : ["Google", "Facebook", "Instagram", "Amazon", "Netflix"],
     };
@@ -21,4 +21,5 @@ class ListValue extends React.Component {
     }
 }
 
-export default ListValue;
+export default List_value;
+

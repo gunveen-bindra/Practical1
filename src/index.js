@@ -1,41 +1,39 @@
+//import {App2}  from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
-//import {App2}  from './App';
 import './index.css';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import Pizza from './Pizza';
 //import Dropdown from './Dropdown';
+//import Image from './Image'
 //import ClockUpdate from './Clockupdate';
 //import Square from './Game';
 //import Board from './Game';
 //import Card from'./Image';
 //import List_value from './ListIterator';
-import ErrorPage from "./TestError.js";
-//function update(){
-  /*ReactDOM.render(
-    <React.StrictMode>*/
-      /*<Table />
-      <Table_had />
-      <Pizza />
-      <Dropdown />
-      <App2 />*/
-      /*<ClockUpdate />
-    <React.StrictMode>,
-    document.getElementById('root')
-  );
-}*/
+//import ErrorPage from "./TestError.js";
+//import {ThemeProvider} from './theme-context';
+//import MagicShopFunctional from './magicshop_function';
+import MagicShop from './magicshop_functional';
+//import MagicShop_UseEffect from './MagicShop_UseEffect';
+
 ReactDOM.render(
   <React.StrictMode>
+    {/*<Image />
+    <List_value />*/}
     {/*<Board />
-    <Card />*/}
-    <ErrorPage />
-    {/*<List_value />
+    <Card />
+    <ThemeProvider>
     <App />
-    <Dropdown />*/}
+    </ThemeProvider>*/}
+    {/*<Dropdown />
+    <ErrorPage />*/}
+    <MagicShop />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 reportWebVitals();
 //setInterval(update,1000);
 //reportWebVitals();
